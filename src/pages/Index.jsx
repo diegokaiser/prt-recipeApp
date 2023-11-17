@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { UAContext } from '@/providers/ua'
 import { AuthContext } from '@/providers/auth'
+import { Home } from './Home/Home'
+import { Login } from './Login/Login'
 
 export function Index() {
   const ua = useContext(UAContext)
@@ -8,7 +10,13 @@ export function Index() {
   console.log('auth: ', auth)
   return (
     <div className="container">
-      <div className="main__content"></div>
+      <div className="main__content">
+        {
+          auth.isAuthenticated ?
+          <Home /> :
+          <Login />
+        }
+      </div>
     </div>
   )
 }
