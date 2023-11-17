@@ -1,6 +1,6 @@
-import './App.scss'
-import { UAProvider } from './providers/ua'
-import { Index } from './pages/Index'
+import '@/App.scss'
+import { UAProvider } from '@/providers/ua'
+import { Index } from '@/pages/Index'
 
 function App() {
 
