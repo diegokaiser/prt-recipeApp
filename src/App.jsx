@@ -1,5 +1,6 @@
 import '@/App.scss'
 import { UAProvider } from '@/providers/ua'
+import { AuthProvider } from '@/providers/auth'
 import { Index } from '@/pages/Index'
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
   return (
     <>
       <UAProvider>
-        <Index />
+        <AuthProvider>
+          <Index />
+        </AuthProvider>
       </UAProvider>
     </>
   )
